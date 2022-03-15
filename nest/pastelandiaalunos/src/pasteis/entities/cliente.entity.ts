@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Pedido } from './pedido.entity';
 
 @Entity()
 export class Cliente {
@@ -11,9 +12,12 @@ export class Cliente {
   @Column()
   sobrenome: string;
 
-  @Column({ length: 11 })
+  @Column({ length: 11, nullable: false })
   cpf: number;
 
   @Column({ length: 11 })
   telefone: number;
+
+  @OneToMany(() => Pedido, (pedido) => pedido.listPedidos)
+  pedidos: Pedido[];
 }
