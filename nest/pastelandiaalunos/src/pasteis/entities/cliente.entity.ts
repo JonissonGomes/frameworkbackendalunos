@@ -8,8 +8,11 @@ export class Cliente {
   @Column()
   nome: string;
 
-  @Column({ length: 14 })
-  cpf: string;
+  @Column()
+  sobrenome: string;
+
+  @Column({ length: 11 })
+  cpf: number;
 
   @Column({ length: 11 })
   telefone: number;
