@@ -1,5 +1,13 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Ingrediente } from './ingrediente.entity';
+import { Pedido } from './pedido.entity';
 
 @Entity()
 export class Pastel {
@@ -14,4 +22,7 @@ export class Pastel {
 
   @OneToMany(() => Ingrediente, (ingrediente) => ingrediente.pastel)
   ingredientes: Ingrediente[];
+
+  @ManyToOne(() => Pedido, (pedido) => pedido.pasteis)
+  pastel: Pastel;
 }
