@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Cliente } from './cliente.entity';
+import { Pastel } from './pastel.entity';
 
 @Entity()
 export class Pedido {
@@ -9,6 +10,6 @@ export class Pedido {
   @Column()
   cliente: Cliente;
 
-  @Column()
-  pastel: [];
+  @OneToMany(() => Pastel, (pasteis) => pasteis.pastel)
+  pasteis: Pastel[];
 }
