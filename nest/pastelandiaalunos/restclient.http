@@ -31,3 +31,15 @@ GET http://localhost:3000/pasteis?ingrediente=mussarela&sabor=por
 
 ###
 DELETE http://localhost:3000/pasteis/2
+
+###
+
+# Rota cliente
+POST http://localhost:3000/cliente 
+
+{ 
+    "nome": "claudio",
+    "sobrenome":"ze",
+    "cpf": 12345678966,
+    "telefone": 81985218521
+}
