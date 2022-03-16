@@ -17,4 +17,7 @@ export class Cliente {
 
   @Column()
   telefone: number;
+
+  @OneToMany(() => Pedido, (pedido) => pedido.cliente)
+  pedidos: Pedido[];
 }
