@@ -35,11 +35,13 @@ DELETE http://localhost:3000/pasteis/2
 ###
 
 # Rota cliente
-POST http://localhost:3000/cliente 
+POST http://localhost:3000/cliente  HTTP/1.1
+content-type: application/json
 
 { 
-    "nome": "claudio",
+    "nome": "José",
     "sobrenome":"ze",
-    "cpf": 12345678966,
-    "telefone": 81985218521
+    "cpf": "12345678966",
+    "telefone": "81985218521"
 }
+
