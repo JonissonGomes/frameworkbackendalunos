@@ -13,10 +13,10 @@ export class Cliente {
   sobrenome: string;
 
   @Column({ nullable: false })
-  cpf: number;
+  cpf: string;
 
   @Column()
-  telefone: number;
+  telefone: string;
 
   @OneToMany(() => Pedido, (pedido) => pedido.cliente)
   pedidos: Pedido[];
