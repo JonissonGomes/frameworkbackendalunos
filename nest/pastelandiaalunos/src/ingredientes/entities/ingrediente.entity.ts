@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
-import { Pastel } from './pastel.entity';
+import { Pastel } from '../../pasteis/entities/pastel.entity';
 
 @Entity()
 export class Ingrediente {

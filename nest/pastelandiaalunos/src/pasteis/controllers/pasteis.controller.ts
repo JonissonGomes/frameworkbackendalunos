@@ -10,9 +10,9 @@ import {
   Res,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-import CreatePastelDTO from './dto/createPastelDTO';
-import GetPastelDTO from './dto/getPastelDTO';
-import { PasteisService } from './pasteis.service';
+import CreatePastelDTO from '../dto/createPastelDTO';
+import GetPastelDTO from '../dto/getPastelDTO';
+import { PasteisService } from '../services/pasteis.service';
 
 @Controller('pasteis')
 export class PasteisController {
