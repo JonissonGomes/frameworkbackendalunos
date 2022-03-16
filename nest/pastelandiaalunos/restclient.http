@@ -45,3 +45,7 @@ content-type: application/json
     "telefone": "81985218521"
 }
 
+###
+GET http://localhost:3000/cliente
+
+
