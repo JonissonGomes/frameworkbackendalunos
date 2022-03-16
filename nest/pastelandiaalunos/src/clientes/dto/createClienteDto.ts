@@ -1,6 +1,6 @@
 export default class CreateClienteDTO {
   public nome: string;
   public sobrenome: string;
-  public cpf: number;
-  public telefone: number;
+  public cpf: string;
+  public telefone: string;
 }
