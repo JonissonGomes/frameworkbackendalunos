@@ -1,13 +1,12 @@
 import {
   Column,
   Entity,
-  JoinColumn,
   ManyToOne,
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Ingrediente } from './ingrediente.entity';
-import { Pedido } from './pedido.entity';
+import { Ingrediente } from '../../ingredientes/entities/ingrediente.entity';
+import { Pedido } from '../../pedidos/entities/pedido.entity';
 
 @Entity()
 export class Pastel {
