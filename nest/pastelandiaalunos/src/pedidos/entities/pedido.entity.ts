@@ -1,10 +1,10 @@
 import {
   Entity,
   PrimaryGeneratedColumn,
-  OneToMany,
   ManyToOne,
   ManyToMany,
   JoinColumn,
+  Column,
 } from 'typeorm';
 import { Cliente } from '../../clientes/entities/cliente.entity';
 import { Pastel } from '../../pasteis/entities/pastel.entity';
@@ -13,6 +13,9 @@ import { Pastel } from '../../pasteis/entities/pastel.entity';
 export class Pedido {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column()
+  valorPedido: number;
 
   @ManyToOne(() => Cliente)
   @JoinColumn({ name: 'clienteId' })
