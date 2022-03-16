@@ -2,11 +2,12 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PasteisModule } from './pasteis/pasteis.module';
 import { Ingrediente } from './ingredientes/entities/ingrediente.entity';
 import { Cliente } from './clientes/entities/cliente.entity';
 import { Pastel } from './pasteis/entities/pastel.entity';
 import { Pedido } from './pedidos/entities/pedido.entity';
+import { ClienteModule } from './clientes/cliente.module';
+import { PasteisModule } from './pasteis/pasteis.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { Pedido } from './pedidos/entities/pedido.entity';
       synchronize: true,
       logging: true,
     }),
+    ClienteModule,
     PasteisModule,
   ],
   controllers: [AppController],
